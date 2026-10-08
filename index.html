@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DigiNotes — Your Digital Library</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <!-- Animated background -->
+  <div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="glass header">
+    <div class="logo">
+      <i data-lucide="book-open" class="logo-icon"></i>
+      <span class="logo-text">Digi<span class="accent">Notes</span></span>
+    </div>
+    <div class="search-wrap">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" id="searchInput" placeholder="Search notes..." />
+    </div>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" title="Toggle theme">
+        <i data-lucide="moon" id="themeIcon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1 class="hero-title">Your <span class="accent">Digital</span> Library</h1>
+    <p class="hero-sub">Beautifully crafted study notes, all in one place.</p>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories glass">
+    <h2 class="section-title">
+      <i data-lucide="folder-kanban" class="title-icon"></i> Categories
+    </h2>
+    <div class="category-grid" id="categoryGrid"></div>
+  </section>
+
+  <!-- Notes Grid -->
+  <section class="notes-section">
+    <h2 class="section-title">
+      <i data-lucide="sparkles" class="title-icon"></i> All Notes
+      <span class="note-count" id="noteCount">0</span>
+    </h2>
+    <div class="notes-grid" id="notesGrid"></div>
+  </section>
+
+  <!-- Note Reader Modal -->
+  <div class="modal" id="noteModal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content glass">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-icon" id="modalIcon">
+            <i data-lucide="book-marked"></i>
+          </div>
+          <div>
+            <h3 class="modal-title" id="modalTitle"></h3>
+            <p class="modal-meta" id="modalMeta"></p>
+          </div>
+        </div>
+        <button class="icon-btn close-btn" id="closeModal">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="glass footer">
+    <p>Crafted with <i data-lucide="heart" class="footer-heart"></i> — DigiNotes © 2026</p>
+  </footer>
+
+  <script src="notes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
